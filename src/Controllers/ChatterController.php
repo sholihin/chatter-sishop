@@ -1,10 +1,10 @@
 <?php
 
-namespace Sholihin\ChatterSiShop\Controllers;
+namespace Sholihin\Chattersishop\Controllers;
 
 use Auth;
-use Sholihin\ChatterSiShop\Helpers\ChatterHelper as Helper;
-use Sholihin\ChatterSiShop\Models\Models;
+use Sholihin\Chattersishop\Helpers\ChatterHelper as Helper;
+use Sholihin\Chattersishop\Models\Models;
 use Illuminate\Routing\Controller as Controller;
 
 class ChatterController extends Controller

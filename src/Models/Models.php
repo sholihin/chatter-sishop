@@ -6,7 +6,7 @@
  * Time: 11:58.
  */
 
-namespace Sholihin\ChatterSiShop\Models;
+namespace Sholihin\Chattersishop\Models;
 
 class Models
 {
@@ -58,7 +58,7 @@ class Models
      *
      * @param array $attributes
      *
-     * @return \Sholihin\ChatterSiShop\Models\Category
+     * @return \Sholihin\Chattersishop\Models\Category
      */
     public static function category(array $attributes = [])
     {
@@ -70,7 +70,7 @@ class Models
      *
      * @param array $attributes
      *
-     * @return \Sholihin\ChatterSiShop\Models\Discussion
+     * @return \Sholihin\Chattersishop\Models\Discussion
      */
     public static function discussion(array $attributes = [])
     {
@@ -82,7 +82,7 @@ class Models
      *
      * @param array $attributes
      *
-     * @return \Sholihin\ChatterSiShop\Models\Post
+     * @return \Sholihin\Chattersishop\Models\Post
      */
     public static function post(array $attributes = [])
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Sholihin\ChatterSiShop;
+namespace Sholihin\Chattersishop;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -23,11 +23,11 @@ class ChatterServiceProvider extends ServiceProvider
         ], 'chatter_config');
 
         $this->publishes([
-            __DIR__.'/../database/migrations' => database_path('migrations'.'/chatter/'),
+            __DIR__.'/../database/migrations' => database_path('migrations'.'/chatter'),
         ], 'chatter_migrations');
 
         $this->publishes([
-            __DIR__.'/../database/seeds' => database_path('seeds'.'/chatter/'),
+            __DIR__.'/../database/seeds' => database_path('seeds'.'/chatter'),
 
         ], 'chatter_seeds');
 

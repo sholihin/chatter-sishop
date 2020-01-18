@@ -1,6 +1,6 @@
 <?php
 
-namespace Sholihin\ChatterSiShop\Events;
+namespace Sholihin\Chattersishop\Events;
 
 use Illuminate\Http\Request;
 use Illuminate\Validation\Validator;
