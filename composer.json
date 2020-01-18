@@ -21,11 +21,6 @@
 	      "Sholihin\\Chattersishop\\": "/src"
 		}
 	},
-    "autoload-dev": {
-        "classmap": [
-            "tests/TestCase.php"
-        ]
-    },
     "extra": {
         "laravel": {
             "providers": [
