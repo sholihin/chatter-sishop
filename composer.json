@@ -18,7 +18,7 @@
     },
     "autoload": {
 	    "psr-4": {
-	      "Sholihin\\Chatter\\": "/src"
+	      "Sholihin\\Chattersishop\\": "/src"
 		}
 	},
     "autoload-dev": {
