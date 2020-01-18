@@ -49,9 +49,9 @@ class ChatterDiscussionController extends Controller
      */
     public function create()
     {
-        $categories = Models::category()->all();
+        $ccategories = Models::category()->all();
 
-        return view('chatter::discussion.create', compact('categories'));
+        return view('chatter::discussion.create', compact('ccategories'));
     }
 
     /**
@@ -223,12 +223,12 @@ class ChatterDiscussionController extends Controller
         }
 
         $discussion->increment('views');
-        $categories = Models::category()->get();
-        $categoriesMenu = Helper::categoriesMenu(array_filter($categories->toArray(), function ($item) {
+        $ccategories = Models::category()->get();
+        $categoriesMenu = Helper::categoriesMenu(array_filter($ccategories->toArray(), function ($item) {
             return $item['parent_id'] === null;
         }));
         
-        return view('chatter::discussion', compact('discussion', 'categoriesMenu', 'posts', 'chatter_editor'));
+        return view('chatter::discussion', compact('ccategories','discussion', 'categoriesMenu', 'posts', 'chatter_editor'));
     }
 
     /**
