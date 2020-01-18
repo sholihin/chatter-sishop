@@ -25,13 +25,13 @@ Quick Note: If this is a new project, make sure to install the default user auth
    **If you're installing on Laravel 5.5+ skip this step**
 
     ```
-    Sholihin\ChatterSiShop\ChatterServiceProvider::class,
+    Sholihin\Chattersishop\ChatterServiceProvider::class,
     ```
 
 3. Publish the Vendor Assets files by running:
 
     ```
-    php artisan vendor:publish --provider="Sholihin\ChatterSiShop\ChatterServiceProvider"
+    php artisan vendor:publish --provider="Sholihin\Chattersishop\ChatterServiceProvider"
     ```
 
 4. Now that we have published a few new files to our application we need to reload them with the following command:
@@ -43,7 +43,7 @@ Quick Note: If this is a new project, make sure to install the default user auth
 5. Run Your migrations:
 
     ```
-    php artisan migrate
+    php artisan migrate --path=database/migrations/chatter/
     ```
 
     Quick tip: Make sure that you've created a database and added your database credentials in your `.env` file.
@@ -70,12 +70,6 @@ Now, visit your site.com/forums and you should see your new forum in front of yo
 
 ### Upgrading
 
-Make sure that your composer.json file is requiring the latest version of chatter:
-
-```
-"sholihin/chatter": "0.2.*"
-```
-
 Then you'll run:
 
 ```
@@ -93,7 +87,7 @@ php artisan vendor:publish --tag=chatter_migrations --force
 Next to make sure you have the latest database schema run:
 
 ```
-php artisan migrate
+php artisan migrate --path=database/migrations/chatter/migrate
 ```
 
 And you'll be up-to-date with the latest version :)
@@ -211,7 +205,7 @@ For example, to register a listener for the "before new discussion" event, add t
 
 ```php
 protected $listen = [
-    'Sholihin\ChatterSiShop\Events\ChatterBeforeNewDiscussion' => [
+    'Sholihin\Chattersishop\Events\ChatterBeforeNewDiscussion' => [
         'App\Listeners\HandleNewDiscussion',
     ],
 ];
