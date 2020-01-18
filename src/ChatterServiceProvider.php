@@ -23,11 +23,11 @@ class ChatterServiceProvider extends ServiceProvider
         ], 'chatter_config');
 
         $this->publishes([
-            __DIR__.'/../database/migrations/' => database_path('migrations'),
+            __DIR__.'/../database/migrations/chatter' => database_path('migrations'),
         ], 'chatter_migrations');
 
         $this->publishes([
-            __DIR__.'/../database/seeds/' => database_path('seeds'),
+            __DIR__.'/../database/seeds/chatter' => database_path('seeds'),
         ], 'chatter_seeds');
 
         $this->publishes([

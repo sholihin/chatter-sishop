@@ -1,8 +1,8 @@
 <?php
 
-namespace Sholihin\Chatter\Mail;
+namespace Sholihin\ChatterSiShop\Mail;
 
-use Sholihin\Chatter\Models\Discussion;
+use Sholihin\ChatterSiShop\Models\Discussion;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;

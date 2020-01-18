@@ -101,6 +101,9 @@ body {
 }
 @media only screen and (min-width: 239px) and (max-width: 749px) {
   #new_discussion, #new_discussion_in_discussion_view { width: 95% !important; margin-left: -47.5% !important; }
+  #chatter.discussion #editor #tinymce_placeholder {
+    top: 85px;
+  }
 }
 #chatter #new_discussion form,
 #new_discussion_in_discussion_view form {
@@ -560,8 +563,7 @@ body {
 }
 #chatter #editor #tinymce_placeholder {
   position: absolute;
-  top: 89px;
-  left: 0px;
+  top: 90px;
   padding: 8px 14px;
   width: 96%;
   overflow: hidden;
@@ -641,11 +643,8 @@ body {
 #chatter.discussion #editor .mce-toolbar {
   border-top: 0px !important;
 }
-#chatter.discussion #editor #tinymce_placeholder {
-  top: 35px;
-}
 #chatter.discussion #new_response {
-  padding-left: 100px;
+  padding-left: 80px;
   padding-right: 15px;
 }
 #chatter.discussion #new_response .chatter_avatar {
@@ -660,6 +659,10 @@ body {
   margin-top: 0px;
   border: 1px solid #f1f5ff;
   width: 100%;
+  border-radius: 2px;
+}
+#chatter_form_editor{
+  border: 1px solid #f1f5ff;
   border-radius: 2px;
 }
 #chatter.discussion ul.discussions li .chatter_posts .chatter_middle > span {

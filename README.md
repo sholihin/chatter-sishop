@@ -17,7 +17,7 @@ Quick Note: If this is a new project, make sure to install the default user auth
 1. Include the package in your project
 
     ```
-    composer require "sholihin/chatter=0.2.*"
+    composer require "sholihin/chattersishop=0.2.*"
     ```
 
 2. Add the service provider to your `config/app.php` providers array:
@@ -31,7 +31,7 @@ Quick Note: If this is a new project, make sure to install the default user auth
 3. Publish the Vendor Assets files by running:
 
     ```
-    php artisan vendor:publish --provider="Sholihin\Chatter\ChatterServiceProvider"
+    php artisan vendor:publish --provider="Sholihin\ChatterSiShop\ChatterServiceProvider"
     ```
 
 4. Now that we have published a few new files to our application we need to reload them with the following command:
