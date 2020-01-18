@@ -1,12 +1,12 @@
 @extends(Config::get('chatter.master_file_extend'))
 
 @section(Config::get('chatter.yields.head'))
-<link href="{{ url('/vendor/devdojo/chatter/assets/vendor/spectrum/spectrum.css') }}" rel="stylesheet">
-<link href="{{ url('/vendor/devdojo/chatter/assets/css/chatter.css') }}" rel="stylesheet">
+<link href="{{ url('/vendor/sholihin/chatter/assets/vendor/spectrum/spectrum.css') }}" rel="stylesheet">
+<link href="{{ url('/vendor/sholihin/chatter/assets/css/chatter.css') }}" rel="stylesheet">
 @if($chatter_editor == 'simplemde')
-<link href="{{ url('/vendor/devdojo/chatter/assets/css/simplemde.min.css') }}" rel="stylesheet">
+<link href="{{ url('/vendor/sholihin/chatter/assets/css/simplemde.min.css') }}" rel="stylesheet">
 @elseif($chatter_editor == 'trumbowyg')
-<link href="{{ url('/vendor/devdojo/chatter/assets/vendor/trumbowyg/ui/trumbowyg.css') }}" rel="stylesheet">
+<link href="{{ url('/vendor/sholihin/chatter/assets/vendor/trumbowyg/ui/trumbowyg.css') }}" rel="stylesheet">
 <style>
 	.trumbowyg-box,
 	.trumbowyg-editor {
@@ -224,8 +224,8 @@
 
 
 @if( $chatter_editor == 'tinymce' || empty($chatter_editor) )
-<script src="{{ url('/vendor/devdojo/chatter/assets/vendor/tinymce/tinymce.min.js') }}"></script>
-<script src="{{ url('/vendor/devdojo/chatter/assets/js/tinymce.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/vendor/tinymce/tinymce.min.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/js/tinymce.js') }}"></script>
 <script>
 	var my_tinymce = tinyMCE;
 		$('document').ready(function(){
@@ -235,18 +235,18 @@
 		});
 </script>
 @elseif($chatter_editor == 'simplemde')
-<script src="{{ url('/vendor/devdojo/chatter/assets/js/simplemde.min.js') }}"></script>
-<script src="{{ url('/vendor/devdojo/chatter/assets/js/chatter_simplemde.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/js/simplemde.min.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/js/chatter_simplemde.js') }}"></script>
 @elseif($chatter_editor == 'trumbowyg')
-<script src="{{ url('/vendor/devdojo/chatter/assets/vendor/trumbowyg/trumbowyg.min.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/vendor/trumbowyg/trumbowyg.min.js') }}"></script>
 <script
-	src="{{ url('/vendor/devdojo/chatter/assets/vendor/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js') }}">
+	src="{{ url('/vendor/sholihin/chatter/assets/vendor/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js') }}">
 </script>
-<script src="{{ url('/vendor/devdojo/chatter/assets/js/trumbowyg.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/js/trumbowyg.js') }}"></script>
 @endif
 
-<script src="{{ url('/vendor/devdojo/chatter/assets/vendor/spectrum/spectrum.js') }}"></script>
-<script src="{{ url('/vendor/devdojo/chatter/assets/js/chatter.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/vendor/spectrum/spectrum.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/js/chatter.js') }}"></script>
 <script>
 	$('document').ready(function(){
 

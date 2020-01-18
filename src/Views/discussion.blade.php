@@ -2,13 +2,13 @@
 
 @section(Config::get('chatter.yields.head'))
     @if(Config::get('chatter.sidebar_in_discussion_view'))
-        <link href="{{ url('/vendor/devdojo/chatter/assets/vendor/spectrum/spectrum.css') }}" rel="stylesheet">
+        <link href="{{ url('/vendor/sholihin/chatter/assets/vendor/spectrum/spectrum.css') }}" rel="stylesheet">
     @endif
-    <link href="{{ url('/vendor/devdojo/chatter/assets/css/chatter.css') }}" rel="stylesheet">
+    <link href="{{ url('/vendor/sholihin/chatter/assets/css/chatter.css') }}" rel="stylesheet">
     @if($chatter_editor == 'simplemde')
-        <link href="{{ url('/vendor/devdojo/chatter/assets/css/simplemde.min.css') }}" rel="stylesheet">
+        <link href="{{ url('/vendor/sholihin/chatter/assets/css/simplemde.min.css') }}" rel="stylesheet">
     @elseif($chatter_editor == 'trumbowyg')
-        <link href="{{ url('/vendor/devdojo/chatter/assets/vendor/trumbowyg/ui/trumbowyg.css') }}" rel="stylesheet">
+        <link href="{{ url('/vendor/sholihin/chatter/assets/vendor/trumbowyg/ui/trumbowyg.css') }}" rel="stylesheet">
         <style>
             .trumbowyg-box, .trumbowyg-editor {
                 margin: 0px auto;
@@ -197,7 +197,7 @@
 								<button id="submit_response" class="btn btn-success pull-right"><i class="chatter-new"></i> @lang('chatter::messages.response.submit')</button>
 								@if(Config::get('chatter.email.enabled'))
 									<div id="notify_email">
-										<img src="{{ url('/vendor/devdojo/chatter/assets/images/email.gif') }}" class="chatter_email_loader">
+										<img src="{{ url('/vendor/sholihin/chatter/assets/images/email.gif') }}" class="chatter_email_loader">
 										<!-- Rounded toggle switch -->
 										<span>@lang('chatter::messages.email.notify')</span>
 										<label class="switch">
@@ -300,8 +300,8 @@
 
 @if( $chatter_editor == 'tinymce' || empty($chatter_editor) )
 	<script>var chatter_editor = 'tinymce';</script>
-    <script src="{{ url('/vendor/devdojo/chatter/assets/vendor/tinymce/tinymce.min.js') }}"></script>
-    <script src="{{ url('/vendor/devdojo/chatter/assets/js/tinymce.js') }}"></script>
+    <script src="{{ url('/vendor/sholihin/chatter/assets/vendor/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ url('/vendor/sholihin/chatter/assets/js/tinymce.js') }}"></script>
     <script>
         var my_tinymce = tinyMCE;
         $('document').ready(function(){
@@ -314,17 +314,17 @@
     </script>
 @elseif($chatter_editor == 'simplemde')
 	<script>var chatter_editor = 'simplemde';</script>
-    <script src="{{ url('/vendor/devdojo/chatter/assets/js/simplemde.min.js') }}"></script>
-    <script src="{{ url('/vendor/devdojo/chatter/assets/js/chatter_simplemde.js') }}"></script>
+    <script src="{{ url('/vendor/sholihin/chatter/assets/js/simplemde.min.js') }}"></script>
+    <script src="{{ url('/vendor/sholihin/chatter/assets/js/chatter_simplemde.js') }}"></script>
 @elseif($chatter_editor == 'trumbowyg')
 	<script>var chatter_editor = 'trumbowyg';</script>
-    <script src="{{ url('/vendor/devdojo/chatter/assets/vendor/trumbowyg/trumbowyg.min.js') }}"></script>
-    <script src="{{ url('/vendor/devdojo/chatter/assets/vendor/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js') }}"></script>
-    <script src="{{ url('/vendor/devdojo/chatter/assets/js/trumbowyg.js') }}"></script>
+    <script src="{{ url('/vendor/sholihin/chatter/assets/vendor/trumbowyg/trumbowyg.min.js') }}"></script>
+    <script src="{{ url('/vendor/sholihin/chatter/assets/vendor/trumbowyg/plugins/preformatted/trumbowyg.preformatted.min.js') }}"></script>
+    <script src="{{ url('/vendor/sholihin/chatter/assets/js/trumbowyg.js') }}"></script>
 @endif
 
 @if(Config::get('chatter.sidebar_in_discussion_view'))
-    <script src="/vendor/devdojo/chatter/assets/vendor/spectrum/spectrum.js"></script>
+    <script src="/vendor/sholihin/chatter/assets/vendor/spectrum/spectrum.js"></script>
 @endif
 
 <script>
@@ -466,6 +466,6 @@
 	});
 </script>
 
-<script src="{{ url('/vendor/devdojo/chatter/assets/js/chatter.js') }}"></script>
+<script src="{{ url('/vendor/sholihin/chatter/assets/js/chatter.js') }}"></script>
 
 @stop
