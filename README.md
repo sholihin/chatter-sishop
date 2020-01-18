@@ -87,7 +87,7 @@ php artisan vendor:publish --tag=chatter_migrations --force
 Next to make sure you have the latest database schema run:
 
 ```
-php artisan migrate --path=database/migrations/chatter/migrate
+php artisan migrate --path=database/migrations/chatter/
 ```
 
 And you'll be up-to-date with the latest version :)
