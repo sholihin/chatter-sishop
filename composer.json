@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Sholihin\\Chatter\\ChatterServiceProvider"
+                "Sholihin\\Chattersishop\\ChatterServiceProvider"
             ]
         }
     }
