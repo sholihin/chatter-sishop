@@ -17,7 +17,7 @@ Quick Note: If this is a new project, make sure to install the default user auth
 1. Include the package in your project
 
     ```
-    composer require "devdojo/chatter=0.2.*"
+    composer require "sholihin/chatter=0.2.*"
     ```
 
 2. Add the service provider to your `config/app.php` providers array:
@@ -31,7 +31,7 @@ Quick Note: If this is a new project, make sure to install the default user auth
 3. Publish the Vendor Assets files by running:
 
     ```
-    php artisan vendor:publish --provider="DevDojo\Chatter\ChatterServiceProvider"
+    php artisan vendor:publish --provider="Sholihin\Chatter\ChatterServiceProvider"
     ```
 
 4. Now that we have published a few new files to our application we need to reload them with the following command:
@@ -73,7 +73,7 @@ Now, visit your site.com/forums and you should see your new forum in front of yo
 Make sure that your composer.json file is requiring the latest version of chatter:
 
 ```
-"devdojo/chatter": "0.2.*"
+"sholihin/chatter": "0.2.*"
 ```
 
 Then you'll run:

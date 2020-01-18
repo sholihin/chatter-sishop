@@ -1,6 +1,6 @@
 <?php
 
-namespace DevDojo\Chatter\Controllers;
+namespace Sholihin\Chatter\Controllers;
 
 use Carbon\Carbon;
 use DevDojo\Chatter\Models\Discussion;

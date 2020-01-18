@@ -34,7 +34,7 @@ return [
     |
     */
 
-    'headline_logo' => '/vendor/devdojo/chatter/assets/images/logo-light.png',
+    // 'headline_logo' => '/vendor/devdojo/chatter/assets/images/logo-light.png',
 
     /*
     |--------------------------------------------------------------------------
@@ -69,7 +69,7 @@ return [
     |
     */
 
-    'master_file_extend' => 'layouts.app',
+    'master_file_extend' => 'layouts.official',
 
     /*
     |--------------------------------------------------------------------------
@@ -82,7 +82,7 @@ return [
     |
     */
 
-    'sidebar_in_discussion_view' => false,
+    'sidebar_in_discussion_view' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -122,11 +122,11 @@ return [
     */
 
     'user' => [
-        'namespace'                     => 'App\User',
+        'namespace'                     => 'App\Models\Reseller',
         'database_field_with_user_name' => 'name',
-        'relative_url_to_profile'       => '',
-        'relative_url_to_image_assets'  => '',
-        'avatar_image_database_field'   => '',
+        'relative_url_to_profile'       => '/reseller/profile',
+        'relative_url_to_image_assets'  => '/assets/images/resellers/',
+        'avatar_image_database_field'   => 'photo',
     ],
 
     /*
@@ -223,7 +223,7 @@ return [
     */
 
     'email' => [
-        'enabled' => false,
+        'enabled' => true,
         'view'    => 'chatter::email',
     ],
 

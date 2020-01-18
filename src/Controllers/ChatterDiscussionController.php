@@ -1,13 +1,13 @@
 <?php
 
-namespace DevDojo\Chatter\Controllers;
+namespace Sholihin\Chatter\Controllers;
 
 use Auth;
 use Carbon\Carbon;
-use DevDojo\Chatter\Helpers\ChatterHelper as Helper;
-use DevDojo\Chatter\Events\ChatterAfterNewDiscussion;
-use DevDojo\Chatter\Events\ChatterBeforeNewDiscussion;
-use DevDojo\Chatter\Models\Models;
+use Sholihin\Chatter\Helpers\ChatterHelper as Helper;
+use Sholihin\Chatter\Events\ChatterAfterNewDiscussion;
+use Sholihin\Chatter\Events\ChatterBeforeNewDiscussion;
+use Sholihin\Chatter\Models\Models;
 use Event;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as Controller;

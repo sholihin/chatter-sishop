@@ -1,10 +1,10 @@
 <?php
 
-namespace DevDojo\Chatter\Controllers;
+namespace Sholihin\Chatter\Controllers;
 
 use Auth;
-use DevDojo\Chatter\Helpers\ChatterHelper as Helper;
-use DevDojo\Chatter\Models\Models;
+use Sholihin\Chatter\Helpers\ChatterHelper as Helper;
+use Sholihin\Chatter\Models\Models;
 use Illuminate\Routing\Controller as Controller;
 
 class ChatterController extends Controller
