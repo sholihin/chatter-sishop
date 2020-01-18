@@ -17,7 +17,7 @@ Quick Note: If this is a new project, make sure to install the default user auth
 1. Include the package in your project
 
     ```
-    composer require "sholihin/chattersishop=0.2.*"
+    composer require "sholihin/chattersishop"
     ```
 
 2. Add the service provider to your `config/app.php` providers array:
@@ -25,7 +25,7 @@ Quick Note: If this is a new project, make sure to install the default user auth
    **If you're installing on Laravel 5.5+ skip this step**
 
     ```
-    DevDojo\Chatter\ChatterServiceProvider::class,
+    Sholihin\ChatterSiShop\ChatterServiceProvider::class,
     ```
 
 3. Publish the Vendor Assets files by running:
@@ -211,7 +211,7 @@ For example, to register a listener for the "before new discussion" event, add t
 
 ```php
 protected $listen = [
-    'DevDojo\Chatter\Events\ChatterBeforeNewDiscussion' => [
+    'Sholihin\ChatterSiShop\Events\ChatterBeforeNewDiscussion' => [
         'App\Listeners\HandleNewDiscussion',
     ],
 ];
