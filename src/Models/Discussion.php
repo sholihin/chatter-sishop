@@ -1,6 +1,6 @@
 <?php
 
-namespace Sholihin\Chatter\Models;
+namespace Sholihin\ChatterSiShop\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

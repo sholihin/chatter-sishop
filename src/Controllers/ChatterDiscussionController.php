@@ -1,13 +1,13 @@
 <?php
 
-namespace Sholihin\Chatter\Controllers;
+namespace Sholihin\ChatterSiShop\Controllers;
 
 use Auth;
 use Carbon\Carbon;
-use Sholihin\Chatter\Helpers\ChatterHelper as Helper;
-use Sholihin\Chatter\Events\ChatterAfterNewDiscussion;
-use Sholihin\Chatter\Events\ChatterBeforeNewDiscussion;
-use Sholihin\Chatter\Models\Models;
+use Sholihin\ChatterSiShop\Helpers\ChatterHelper as Helper;
+use Sholihin\ChatterSiShop\Events\ChatterAfterNewDiscussion;
+use Sholihin\ChatterSiShop\Events\ChatterBeforeNewDiscussion;
+use Sholihin\ChatterSiShop\Models\Models;
 use Event;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as Controller;

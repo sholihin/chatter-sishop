@@ -1,6 +1,6 @@
 <?php
 
-namespace Sholihin\Chatter\Helpers;
+namespace Sholihin\ChatterSiShop\Helpers;
 
 class ChatterHelper
 {

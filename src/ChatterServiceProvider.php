@@ -28,6 +28,7 @@ class ChatterServiceProvider extends ServiceProvider
 
         $this->publishes([
             __DIR__.'/../database/seeds' => database_path('seeds'.'/chatter'),
+
         ], 'chatter_seeds');
 
         $this->publishes([
