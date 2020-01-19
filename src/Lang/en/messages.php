@@ -34,7 +34,7 @@ return [
     ],
 
     'email' => [
-        'notify' => 'Notify me.',
+        'notify' => 'Notify me',
     ],
 
     'auth' => 'Please <a href="/:home/login">login</a>

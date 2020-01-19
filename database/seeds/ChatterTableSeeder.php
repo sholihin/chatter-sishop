@@ -14,8 +14,8 @@ class ChatterTableSeeder extends Seeder
 
         // CREATE THE USER
 
-        if (!\DB::table('reseller')->find(1)) {
-            \DB::table('reseller')->insert([
+        if (!\DB::table('resellers')->find(1)) {
+            \DB::table('resellers')->insert([
                 0 => [
                     'id'             => 1,
                     'name'           => 'Mohamad Sholihin',
