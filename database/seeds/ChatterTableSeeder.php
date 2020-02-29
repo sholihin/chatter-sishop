@@ -20,7 +20,7 @@ class ChatterTableSeeder extends Seeder
                     'id'             => 1,
                     'name'           => 'Mohamad Sholihin',
                     'email'          => 'mohamad.sholihin.it@gmail.com',
-                    'password'       => '$2y$10$9ED4Exe2raEeaeOzk.EW6uMBKn3Ib5Q.7kABWaf4QHagOgYHU8ca.',
+                    'password'       => bcrypt('bismillah'),
                     'remember_token' => 'RvlORzs8dyG8IYqssJGcuOY2F0vnjBy2PnHHTX2MoV7Hh6udjJd6hcTox3un',
                     'created_at'     => '2016-07-29 15:13:02',
                     'updated_at'     => '2016-08-18 14:33:50',
