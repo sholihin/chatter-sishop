@@ -65,6 +65,7 @@ class ChatterDiscussionController extends Controller
     public function store(Request $request)
     {
         $request->request->add(['body_content' => strip_tags($request->body)]);
+
         $validator = Validator::make(Input::all(), [
             'title'               => 'required|min:5|max:255',
             'body_content'        => 'required|min:10',

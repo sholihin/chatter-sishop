@@ -12,13 +12,13 @@ return [
         ],
     ],
     'info' => [
-        'title' => 'Heads Up!',
+        'title' => 'Info!',
     ],
     'warning' => [
-        'title' => 'Wuh Oh!',
+        'title' => 'Attentions!',
     ],
     'danger'  => [
-        'title'  => 'Oh Snap!',
+        'title'  => 'Warning!',
         'reason' => [
             'errors'            => 'Please fix the following errors:',
             'prevent_spam'      => 'In order to prevent spam, please allow at least :minutes in between submitting content.',
