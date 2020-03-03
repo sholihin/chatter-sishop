@@ -24,7 +24,7 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div id="chatter_hero">
-				<div class="p-4">
+				<div class="p-4" style="background-color:{{ $discussion->color }}; color:white">
 					<div class="col-md-6">
 						<a class="btn btn-info text-white mb-2" href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-back"></i> Back</a>
 						<h5 class="text-white"><strong>{{ $discussion->title }}</strong></h5>
