@@ -280,7 +280,7 @@
                 <input type="hidden" name="_token" id="csrf_token_field" value="{{ csrf_token() }}">
 
                 <div id="new_discussion_footer">
-                    <input type='text' id="color" name="color" /><span class="select_color_text">@lang('chatter::messages.editor.tinymce_placeholder')</span>
+                    <input type='text' id="color" name="color" value="#333639" /><span class="select_color_text">@lang('chatter::messages.editor.tinymce_placeholder')</span>
                     <button id="submit_discussion" class="btn btn-success pull-right"><i class="chatter-new"></i> Create {{ Config::get('chatter.titles.discussion') }}</button>
                     <a href="/{{ Config::get('chatter.routes.home') }}" class="btn btn-default pull-right" id="cancel_discussion">Cancel</a>
                     <div style="clear:both"></div>

@@ -50,14 +50,14 @@ class ChatterController extends Controller
     public function login()
     {
         if (!Auth::guard('reseller')) {
-            return \Redirect::to('/'.config('chatter.routes.login').'?redirect='.config('chatter.routes.home'))->with('flash_message', 'Please create an account before posting.');
+            return redirect('/'.config('chatter.routes.login').'?redirect='.config('chatter.routes.home'))->with('flash_message', 'Please create an account before posting.');
         }
     }
     
     public function register()
     {
         if (!Auth::guard('reseller')) {
-            return \Redirect::to('/'.config('chatter.routes.register').'?redirect='.config('chatter.routes.home'))->with('flash_message', 'Please register for an account.');
+            return redirect('/'.config('chatter.routes.register').'?redirect='.config('chatter.routes.home'))->with('flash_message', 'Please register for an account.');
         }
     }
 }
