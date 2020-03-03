@@ -12,6 +12,7 @@ use Event;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as Controller;
 use Validator;
+use Illuminate\Support\Facades\Input;
 
 class ChatterDiscussionController extends Controller
 {
@@ -65,7 +66,7 @@ class ChatterDiscussionController extends Controller
     {
         $request->request->add(['body_content' => strip_tags($request->body)]);
 
-        $validator = Validator::make($request->all(), [
+        $validator = Validator::make(Input::all(), [
             'title'               => 'required|min:5|max:255',
             'body_content'        => 'required|min:10',
             'chatter_category_id' => 'required',
@@ -80,16 +81,15 @@ class ChatterDiscussionController extends Controller
 			'body_content.required' => trans('chatter::alert.danger.reason.content_required'),
 			'body_content.min' => trans('chatter::alert.danger.reason.content_min'),
 			'chatter_category_id.required' => trans('chatter::alert.danger.reason.category_required'),
-		]);
+        ]);
         
-
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+        
         Event::fire(new ChatterBeforeNewDiscussion($request, $validator));
         if (function_exists('chatter_before_new_discussion')) {
             chatter_before_new_discussion($request, $validator);
-        }
-
-        if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
         }
 
         $user_id = Auth::guard('reseller')->user()->id;
@@ -153,7 +153,6 @@ class ChatterDiscussionController extends Controller
         $discussion->users()->attach($user_id);
 
         $post = Models::post()->create($new_post);
-
         if ($post->id) {
             Event::fire(new ChatterAfterNewDiscussion($request, $discussion, $post));
             if (function_exists('chatter_after_new_discussion')) {

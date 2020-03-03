@@ -23,11 +23,15 @@
 <div id="chatter" class="discussion">
 	<div class="row">
 		<div class="col-md-12">
-			<div class="p-4" style="background-color:{{ $discussion->color }}; color:white">
-				<div class="container">
-					<a class="btn btn-info text-white mb-2" href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-back"></i> Back</a>
-					<h5 class="text-white"><strong>{{ $discussion->title }}</strong></h5>
-					<span class="chatter_head_details"> @lang('chatter::messages.discussion.head_details')<a class="chatter_cat ml-2" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.category') }}/{{ $discussion->category->slug }}" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</a></span>
+			<div id="chatter_hero">
+				<div class="p-4">
+					<div class="col-md-6">
+						<a class="btn btn-info text-white mb-2" href="/{{ Config::get('chatter.routes.home') }}"><i class="chatter-back"></i> Back</a>
+						<h5 class="text-white"><strong>{{ $discussion->title }}</strong></h5>
+					</div>
+					<div class="col-md-4">
+						<span class="chatter_head_details text-white"> @lang('chatter::messages.discussion.head_details')<a class="chatter_cat ml-2" href="/{{ Config::get('chatter.routes.home') }}/{{ Config::get('chatter.routes.category') }}/{{ $discussion->category->slug }}" style="background-color:{{ $discussion->category->color }}">{{ $discussion->category->name }}</a></span>
+					</div>
 				</div>
 			</div>
 		</div>

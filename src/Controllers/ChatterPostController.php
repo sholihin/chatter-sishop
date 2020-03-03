@@ -68,7 +68,7 @@ class ChatterPostController extends Controller
         }
 
         if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput();
         }
 
         if (config('chatter.security.limit_time_between_posts')) {
@@ -173,7 +173,7 @@ class ChatterPostController extends Controller
 		]);
 
         if ($validator->fails()) {
-            return back()->withErrors($validator)->withInput();
+            return redirect()->back()->withErrors($validator)->withInput();
         }
 
         $post = Models::post()->find($id);
