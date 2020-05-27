@@ -138,7 +138,6 @@ class ChatterDiscussionController extends Controller
         }
 
         $discussion = Models::discussion()->create($new_discussion);
-
         $new_post = [
             'chatter_discussion_id' => $discussion->id,
             'user_id'               => $user_id,
@@ -150,9 +149,10 @@ class ChatterDiscussionController extends Controller
         endif;
 
         // add the user to automatically be notified when new posts are submitted
-        $discussion->users()->attach($user_id);
+        // $discussion->users()->attach($user_id);
 
         $post = Models::post()->create($new_post);
+        
         if ($post->id) {
             Event::fire(new ChatterAfterNewDiscussion($request, $discussion, $post));
             if (function_exists('chatter_after_new_discussion')) {

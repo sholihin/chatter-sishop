@@ -199,7 +199,7 @@
 	
 							<div id="discussion_response_email">
 								<button id="submit_response" class="btn btn-success pull-right"><i class="chatter-new"></i> @lang('chatter::messages.response.submit')</button>
-								@if(Config::get('chatter.email.enabled'))
+								{{-- @if(Config::get('chatter.email.enabled'))
 									<div id="notify_email">
 										<img src="{{ url('/vendor/sholihin/chatter/assets/images/email.gif') }}" class="chatter_email_loader">
 										<!-- Rounded toggle switch -->
@@ -211,7 +211,7 @@
 											  <div class="slider round"></div>
 										</label>
 									</div>
-								@endif
+								@endif --}}
 							</div>
 						</div>
 					</div>

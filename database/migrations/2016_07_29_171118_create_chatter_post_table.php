@@ -11,8 +11,11 @@ class CreateChatterPostTable extends Migration
             $table->increments('id');
             $table->integer('chatter_discussion_id')->unsigned();
             $table->integer('user_id')->unsigned();
+            $table->boolean('markdown')->default(0);
+            $table->boolean('locked')->default(0);
             $table->text('body');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
