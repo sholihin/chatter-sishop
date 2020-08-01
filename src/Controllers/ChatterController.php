@@ -11,7 +11,7 @@ class ChatterController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:reseller');
+        $this->middleware('auth:'.config('chatter.user.auth'));
     }
     
     public function index($slug = '')
@@ -49,14 +49,14 @@ class ChatterController extends Controller
     
     public function login()
     {
-        if (!Auth::guard('reseller')) {
+        if (!Auth::guard(config('chatter.user.auth'))) {
             return \Redirect::to('/'.config('chatter.routes.login').'?redirect='.config('chatter.routes.home'))->with('flash_message', 'Please create an account before posting.');
         }
     }
     
     public function register()
     {
-        if (!Auth::guard('reseller')) {
+        if (!Auth::guard('auth:'.config('chatter.user.auth'))) {
             return \Redirect::to('/'.config('chatter.routes.register').'?redirect='.config('chatter.routes.home'))->with('flash_message', 'Please register for an account.');
         }
     }

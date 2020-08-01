@@ -91,7 +91,7 @@
 	                		<li data-id="{{ $post->id }}" data-markdown="{{ $post->markdown }}">
 		                		<div class="row">
 									<div class="col-md-12 chatter_posts">
-		                			@if(!Auth::guest() && (Auth::guard('reseller')->user()->id == $post->user->id))
+		                			@if(!Auth::guest() && (Auth::guard(config('chatter.user.auth'))->user()->id == $post->user->id))
 		                				<div id="delete_warning_{{ $post->id }}" class="chatter_warning_delete">
 		                					<i class="chatter-warning"></i> @lang('chatter::messages.response.confirm')
 		                					<button class="btn btn-sm btn-danger pull-right delete_response">@lang('chatter::messages.response.yes_confirm')</button>
@@ -153,7 +153,7 @@
 
 	            <div id="pagination">{{ $posts->links() }}</div>
 
-				@if(Auth::guard('reseller')->check())
+				@if(Auth::guard(config('chatter.user.auth'))->check())
 				<div class="row">
 					<div class="col-md-12 chatter_posts">
 						<div class="chatter_avatar">
@@ -205,7 +205,7 @@
 										<!-- Rounded toggle switch -->
 										<span>@lang('chatter::messages.email.notify')</span>
 										<label class="switch">
-											  <input type="checkbox" id="email_notification" name="email_notification" @if(Auth::guard('reseller') && $discussion->users->contains(Auth::guard('reseller')->user()->id)){{ 'checked' }}@endif>
+											  <input type="checkbox" id="email_notification" name="email_notification" @if(Auth::guard(config('chatter.user.auth')) && $discussion->users->contains(Auth::guard(config('chatter.user.auth'))->user()->id)){{ 'checked' }}@endif>
 											  <span class="on">@lang('chatter::messages.words.yes')</span>
 											<span class="off">@lang('chatter::messages.words.no')</span>
 											  <div class="slider round"></div>
@@ -442,7 +442,7 @@
                 $('#new_discussion_in_discussion_view').slideUp();
             });
             $('#new_discussion_btn').click(function(){
-                @if(!Auth::guard('reseller'))
+                @if(!Auth::guard(config('chatter.user.auth')))
                     window.location.href = "/{{ Config::get('chatter.routes.home') }}/login";
                 @else
                     $('#new_discussion_in_discussion_view').slideDown();

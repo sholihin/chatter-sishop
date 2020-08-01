@@ -122,11 +122,18 @@ return [
     */
 
     'user' => [
-        'namespace'                     => 'App\Models\Reseller',
+        'namespace'                     => 'App\Models\Member',
         'database_field_with_user_name' => 'name',
-        'relative_url_to_profile'       => '/reseller/profile',
-        'relative_url_to_image_assets'  => '/assets/images/resellers/',
+        'relative_url_to_profile'       => '/member/profile',
+        'relative_url_to_image_assets'  => '/assets/images/members/',
         'avatar_image_database_field'   => 'photo',
+        'auth'   => 'member',
+        'route-login'   => 'member.login.form',
+        'route-register'   => 'member.register',
+        'route-profile'   => 'member.profile',
+        'route-store-profile'   => 'member.store.profile',
+        'route-change-password'   => 'member.change.password',
+        'route-logout-member'   => 'member.logout',
     ],
 
     /*

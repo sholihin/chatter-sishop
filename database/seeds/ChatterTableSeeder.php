@@ -14,12 +14,12 @@ class ChatterTableSeeder extends Seeder
 
         // CREATE THE USER
 
-        if (!\DB::table('reseller')->find(1)) {
-            \DB::table('reseller')->insert([
+        if (!\DB::table('member')->find(1)) {
+            \DB::table('member')->insert([
                 0 => [
                     'id'             => 1,
-                    'name'           => 'Mohamad Sholihin',
-                    'email'          => 'mohamad.sholihin.it@gmail.com',
+                    'name'           => 'Reseller',
+                    'email'          => 'reseller@gmail.com',
                     'password'       => '$2y$10$9ED4Exe2raEeaeOzk.EW6uMBKn3Ib5Q.7kABWaf4QHagOgYHU8ca.',
                     'remember_token' => 'RvlORzs8dyG8IYqssJGcuOY2F0vnjBy2PnHHTX2MoV7Hh6udjJd6hcTox3un',
                     'created_at'     => '2016-07-29 15:13:02',

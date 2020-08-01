@@ -6,7 +6,6 @@ use Carbon\Carbon;
 use DevDojo\Chatter\Models\Discussion;
 use Illuminate\Routing\Controller as Controller;
 use SimpleXMLElement;
-
 class ChatterAtomController extends Controller
 {
     /**
@@ -16,7 +15,8 @@ class ChatterAtomController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:reseller');
+        
+        $this->middleware('auth:'.config('chatter.user.auth'));
     }
     
     public function index()

@@ -25,7 +25,7 @@ class ChatterPostController extends Controller
 
     public function __construct()
     {
-        $this->middleware('auth:reseller');
+        $this->middleware('auth:'.config('chatter.user.auth'));
     }
 
     public function index(Request $request)
@@ -85,7 +85,7 @@ class ChatterPostController extends Controller
             }
         }
 
-        $request->request->add(['user_id' => Auth::guard('reseller')->user()->id]);
+        $request->request->add(['user_id' => Auth::guard(config('chatter.user.auth'))->user()->id]);
 
         if (config('chatter.editor') == 'simplemde'):
             $request->request->add(['markdown' => 1]);
@@ -133,7 +133,7 @@ class ChatterPostController extends Controller
 
     private function notEnoughTimeBetweenPosts()
     {
-        $user = Auth::guard('reseller')->user();
+        $user = Auth::guard(config('chatter.user.auth'))->user();
 
         $past = Carbon::now()->subMinutes(config('chatter.security.time_between_posts'));
 
@@ -148,7 +148,7 @@ class ChatterPostController extends Controller
 
     private function sendEmailNotifications($discussion)
     {
-        $users = $discussion->users->except(Auth::guard('reseller')->user()->id);
+        $users = $discussion->users->except(Auth::guard(config('chatter.user.auth'))->user()->id);
         foreach ($users as $user) {
             Mail::to($user)->queue(new ChatterDiscussionUpdated($discussion));
         }
@@ -177,7 +177,7 @@ class ChatterPostController extends Controller
         }
 
         $post = Models::post()->find($id);
-        if (Auth::guard('reseller') && (Auth::guard('reseller')->user()->id == $post->user_id)) {
+        if (Auth::guard(config('chatter.user.auth')) && (Auth::guard(config('chatter.user.auth'))->user()->id == $post->user_id)) {
             if ($post->markdown) {
                 $post->body = $request->body;
             } else {

@@ -254,8 +254,8 @@
 			$('#new_discussion').slideUp();
 		});
 		$('#new_discussion_btn').click(function(){
-			@if(!Auth::guard('reseller'))
-				window.location.href = "{{ route('reseller.login.form') }}";
+			@if(!Auth::guard(config('chatter.user.auth')))
+				window.location.href = "{{ route('member.login.form') }}";
 			@else
 				$('#new_discussion').slideDown();
 				$('#title').focus();

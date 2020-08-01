@@ -23,7 +23,7 @@ class ChatterDiscussionController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth:reseller');
+        $this->middleware('auth:'.config('chatter.user.auth'));
     }
     
     public function index(Request $request)
@@ -92,7 +92,7 @@ class ChatterDiscussionController extends Controller
             chatter_before_new_discussion($request, $validator);
         }
 
-        $user_id = Auth::guard('reseller')->user()->id;
+        $user_id = Auth::guard(config('chatter.user.auth'))->user()->id;
 
         if (config('chatter.security.limit_time_between_posts')) {
             if ($this->notEnoughTimeBetweenDiscussion()) {
@@ -177,7 +177,7 @@ class ChatterDiscussionController extends Controller
 
     private function notEnoughTimeBetweenDiscussion()
     {
-        $user = Auth::guard('reseller')->user();
+        $user = Auth::guard(config('chatter.user.auth'))->user();
 
         $past = Carbon::now()->subMinutes(config('chatter.security.time_between_posts'));
 
@@ -301,7 +301,7 @@ class ChatterDiscussionController extends Controller
 
         $discussion = Models::discussion()->where('slug', '=', $slug)->first();
 
-        $user_id = Auth::guard('reseller')->user()->id;
+        $user_id = Auth::guard(config('chatter.user.auth'))->user()->id;
 
         // if it already exists, remove it
         if ($discussion->users->contains($user_id)) {
